@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => 'gowebstm/gopay-sdk',
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
-        'reference' => NULL,
+        'name' => 'gopay/gopay',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'c5c7f8858bf7375faef26e373572d29735428dc0',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        'gowebstm/gopay-sdk' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
-            'reference' => NULL,
+        'gopay/gopay' => array(
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'c5c7f8858bf7375faef26e373572d29735428dc0',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
