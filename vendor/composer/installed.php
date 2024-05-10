@@ -1,19 +1,19 @@
 <?php return array(
     'root' => array(
-        'name' => 'gopay/gopay',
+        'name' => 'gopay-sdk/gopay-sdk',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'c5c7f8858bf7375faef26e373572d29735428dc0',
+        'reference' => '9a6092d57244c7ecb710295a37f40f070747bbb8',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
         'dev' => true,
     ),
     'versions' => array(
-        'gopay/gopay' => array(
+        'gopay-sdk/gopay-sdk' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'c5c7f8858bf7375faef26e373572d29735428dc0',
+            'reference' => '9a6092d57244c7ecb710295a37f40f070747bbb8',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
