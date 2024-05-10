@@ -1,5 +1,1 @@
-# Ignore the Composer executable file
-composer.phar
-
-# Ignore Visual Studio Code settings directory
-.vscode
+/vendor/

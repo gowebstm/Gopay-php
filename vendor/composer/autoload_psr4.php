@@ -6,5 +6,5 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Gopay-SDK\\Gopay-SDK\\' => array($baseDir . '/src'),
+    'GopaySdk\\Gopay\\' => array($baseDir . '/src'),
 );

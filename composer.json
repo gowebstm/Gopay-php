@@ -1,11 +1,11 @@
 {
-    "name": "gopay-sdk/gopay-sdk",
+    "name": "gopay-sdk/gopay",
     "description": "Gopay SDK for integrating with the Gopay payment gateway.",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Gopay-SDK\\Gopay-SDK\\": "src/"
+            "GopaySdk\\Gopay\\": "src/"
         }
     },
     "authors": [

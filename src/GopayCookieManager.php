@@ -1,6 +1,6 @@
 <?php
 
-namespace GopaySdk;
+namespace GopaySdk\Gopay;
 
 class GopayCookieManager
 {

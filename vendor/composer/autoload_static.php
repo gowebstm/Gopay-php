@@ -4,17 +4,17 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInit1a6b10dc1b660ff4694262bde381534a
+class ComposerStaticInit8fc87d2d7011a189a8487a234c03355f
 {
     public static $prefixLengthsPsr4 = array (
         'G' => 
         array (
-            'Gopay-SDK\\Gopay-SDK\\' => 20,
+            'GopaySdk\\Gopay\\' => 15,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Gopay-SDK\\Gopay-SDK\\' => 
+        'GopaySdk\\Gopay\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
@@ -27,9 +27,9 @@ class ComposerStaticInit1a6b10dc1b660ff4694262bde381534a
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInit1a6b10dc1b660ff4694262bde381534a::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInit1a6b10dc1b660ff4694262bde381534a::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInit1a6b10dc1b660ff4694262bde381534a::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit8fc87d2d7011a189a8487a234c03355f::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit8fc87d2d7011a189a8487a234c03355f::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInit8fc87d2d7011a189a8487a234c03355f::$classMap;
 
         }, null, ClassLoader::class);
     }

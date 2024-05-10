@@ -1,6 +1,6 @@
 <?php
 
-namespace GopaySdk;
+namespace GopaySdk\Gopay;
 
 class Gopay
 {
@@ -12,6 +12,11 @@ class Gopay
     public function paymentInit(): CheckOut
     {
         return CheckOut::getInstance();
+    }
+
+    public function paymentStatus(): CheckOrderStatus
+    {
+        return CheckOrderStatus::getInstance();
     }
 }
 ?>
