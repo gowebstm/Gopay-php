@@ -13,7 +13,7 @@ PHP 7.4 or later
 You can install the GoPay SDK via Composer. Run the following command in your project directory:
 
 ```bash
-composer require gowebstm/gopay-sdk
+composer require gopay-sdk/gopay-sdk
 ```
 
 ### Usage
