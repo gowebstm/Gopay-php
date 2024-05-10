@@ -17,18 +17,24 @@ $accessGopay->authKey($apiKey)
 $verificationResult = $accessGopay->verify();
 var_dump($verificationResult);
 
-$checkout = $gopay->PaymentInit();
+$checkout = $gopay->paymentInit();
 try {
-    $checkout->createOrder('John Doe', '9876543210', 'john@example.com', 'example.com', 1000, 'Product description', 'https://example.com/return');
-    echo "Order created successfully.";
+    $res = $checkout->createOrder('John Doe', '9876543210', 'john@example.com', 'example.com', 1000, 'Product description', 'https://example.com/return');
+    $json = json_decode($res,true);
+    echo "Order created successfully. ";
+    echo "<pre>";
+    print_r($json);
 } catch (\Exception $e) {
     echo "Error creating order: " . $e->getMessage();
 }
 
 $checkout = $gopay->paymentStatus();
 try {
-    $checkout->checkOrderStatus('TW006004513',$domain);
-    echo "Order Status - ";
+    $res = $checkout->checkOrderStatus('TW006004513',$domain);
+    $json = json_decode($res,true);
+    echo "Order Status";
+    echo "<pre>";
+    print_r($json);
 } catch (\Exception $e) {
     echo "Error creating order: " . $e->getMessage();
 }

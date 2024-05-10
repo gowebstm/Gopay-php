@@ -24,7 +24,7 @@ class CheckOut
         return self::$checkOutInit;
     }
 
-    public function createOrder($name, $phone, $email, $domain, $amount, $description, $returnUrl)
+    public function createOrder($name, $phone, $email, $domain, $amount, $description, $returnUrl) 
     {
         if (!isset($name, $phone, $domain, $amount)) {
             throw new \Exception("Required parameters are not set properly. Check again.");
@@ -67,9 +67,16 @@ class CheckOut
         curl_close($ch);
 
         $responseData = json_decode($response, true);
-        if (isset($responseData['status']) && $responseData['status']) {
-            header("Location: " . $responseData['url']);
-            exit;
+        if (isset($responseData['status'])) {
+            if($responseData['status']) {
+                $txnID = $transID;
+                $res = array("status" => $responseData['status'], "message" => $responseData['massage'], "payment_url" => $responseData['url'], "transID" => $txnID);
+                return json_encode($res);
+            } else {
+                $txnID = $transID;
+                $res = array("status" => $responseData['status'], "message" => $responseData['massage']);
+                return json_encode($res);
+            }
         } else {
             throw new \Exception("Order creation failed.");
         }
