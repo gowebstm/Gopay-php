@@ -13,10 +13,5 @@ class Gopay
     {
         return CheckOut::getInstance();
     }
-
-    public function paymentStatus(): CheckOrderStatus
-    {
-        return CheckOrderStatus::getInstance();
-    }
 }
 ?>
