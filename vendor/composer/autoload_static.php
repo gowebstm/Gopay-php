@@ -9,12 +9,12 @@ class ComposerStaticInit777f633d14722d3d1304fdbedcf0cc78
     public static $prefixLengthsPsr4 = array (
         'G' => 
         array (
-            'GopaySdk\\' => 9,
+            'Gopay\\Gopay\\' => 12,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'GopaySdk\\' => 
+        'Gopay\\Gopay\\' => 
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),

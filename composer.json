@@ -1,21 +1,21 @@
 {
-    "name": "gowebstm/gopay-sdk",
-    "description": "PHP SDK for integrating with the Gopay payment gateway.",
+    "name": "gopay/gopay",
+    "description": "Gopay SDK for integrating with the Gopay payment gateway.",
     "type": "library",
     "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Gopay\\Gopay\\": "src/"
+        }
+    },
     "authors": [
         {
             "name": "Basudev Kar",
             "email": "basudevkar4573@gmail.com",
-            "homepage": "https://gowebs.in",
             "role": "Full Stack Developer"
         }
     ],
-    "autoload": {
-        "psr-4": {
-            "GopaySdk\\": "src/"
-        }
-    },
+
     "require": {
         "php": ">=7.4"
     }
