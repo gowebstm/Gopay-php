@@ -1,1 +1,11 @@
-/vendor/
+# Ignore the vendor directory
+/vendor
+
+# Ignore the Composer executable file
+composer.phar
+
+# Ignore the Composer lock file
+composer.lock
+
+# Ignore Visual Studio Code settings directory
+.vscode
