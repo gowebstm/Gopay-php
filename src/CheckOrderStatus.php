@@ -24,14 +24,11 @@ class CheckOrderStatus
         return self::$checkOrderInit;
     }
 
-    public function checkOrderStatus($transID,$domain)
+    public function checkOrderStatus($transID,$domain,$apiKey,$apiToken)
     {
-        if (!isset($transID,$domain)) {
+        if (!isset($transID,$domain,$apiKey,$apiToken)) {
             throw new \Exception("Required parameters are not set properly. Check again.");
         }
-
-        $apiKey = GopayCookieManager::getApiKey();
-        $apiToken = GopayCookieManager::getApiToken();
 
         if (!$apiKey || !$apiToken) {
             throw new \Exception("API key or token not found.");
