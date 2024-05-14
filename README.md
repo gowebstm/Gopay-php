@@ -26,16 +26,21 @@ composer require gopay-sdk/gopay-sdk
 
 require 'vendor/autoload.php';
 
-use GopaySdk\Gopay;
+use GopaySdk\Gopay\Gopay;
 
 // Initialize GoPay instance
 $gopay = new Gopay();
 
 // Access GoPay and perform verification
+
+$apiKey = 'your_api_key';
+$apiToken = 'your_api_token';
+$domain = 'your_domain';
+
 $result = $gopay->accessGopay()
-    ->authKey('auth_key')
-    ->authToken('auth_token')
-    ->authDomain('domain')
+        ->authKey($apiKey)
+        ->authToken($apiToken)
+        ->authDomain($domain);
     ->verify();
 
     if ($result) {
@@ -59,7 +64,7 @@ $result = $gopay->accessGopay()
 
 require 'vendor/autoload.php';
 
-use GopaySdk\Gopay;
+use GopaySdk\Gopay\Gopay;
 
 // Initialize GoPay instance
 $gopay = new Gopay();
@@ -73,22 +78,58 @@ $amount = 100; // Amount in cents
 $description = "Product purchase";
 
 try {
-    $gopay->PaymentInit()
-        ->createOrder($name, $phone, $email, $domain, $amount, $description);
-    // Handle successful order creation
+    $res = $checkout->createOrder('John Doe', '9876543210', 'john@example.com', 'example.com', 1000, 'Product description', 'https://example.com/return');
+    $json = json_decode($res,true);
+    echo "Order created successfully. ";
+    echo "<pre>";
+    print_r($json);
 } catch (\Exception $e) {
-    // Handle order creation failure
-    echo "Order creation failed: " . $e->getMessage();
+    echo "Error creating order: " . $e->getMessage();
 }
 
 ?>
 
 ```
 
-## Response Code
+#### For Gopay Payment Status Check
+
+```php
+
+<?php
+
+require 'vendor/autoload.php'; 
+
+use GopaySdk\Gopay\Gopay;
+
+$gopay = new Gopay();
+
+$apiKey = 'your_api_key';
+$apiToken = 'your_api_token';
+$domain = 'your_domain';
+$transID = 'transaction_ID';
+
+$checkout = $gopay->paymentStatus();
+try {
+    $res = $checkout->checkOrderStatus($transID,$domain,$apiKey,$apiToken);
+    $json = json_decode($res,true);
+    echo "Order Status";
+    echo "<pre>";
+    print_r($json);
+} catch (\Exception $e) {
+    echo "Error creating order: " . $e->getMessage();
+}
+
+?>
+
+
+```
+
+## Response Code for Gopay Verification
 | Code    | Description |
 | -------- | ------- |
 | 200 | Successful authentication    |
 | 400 | Bad request authentication     |
 | 401    | Missing required parameters    |
 | 500    | Bad request error    |
+
+### For Android SDK Visit [Gopay-SDK(Kotlin)](https://github.com/gowebstm/Gopay-kotlin)
