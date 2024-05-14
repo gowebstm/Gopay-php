@@ -30,7 +30,7 @@ try {
 
 $checkout = $gopay->paymentStatus();
 try {
-    $res = $checkout->checkOrderStatus('TW006004513',$domain);
+    $res = $checkout->checkOrderStatus('TW006004513',$domain,$apiKey,$apiToken);
     $json = json_decode($res,true);
     echo "Order Status";
     echo "<pre>";
